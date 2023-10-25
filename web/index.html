@@ -7,8 +7,6 @@
         <meta name="description" content="zachary lewis and Associates Home Page">
         <meta name="author" content="zalmellc">
         <title>Zachary Lewis and Associates</title>
-        <link rel="canonical" href="https://getbootstrap.com/docs/5.3/examples/jumbotrons/">
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@docsearch/css@3">
         <link href="assets/dist/css/bootstrap.min.css" rel="stylesheet">
         <style>
   body {
@@ -43,18 +41,39 @@
     </head>
     <body id="mountain">
         <div style="color: white; text-align: center;">
-          <P>
-            <hr/>
-          </P>
-          <br/><br/><br/>
+            <P>
+                <hr>
+            </P>
+            <br>
+            <br>
+            <br>
             <h2>Zachary Lewis and Associates</h2>
             <p>
-                Simple , cost effective solutions that are customized to me your needs.
+                Simple , cost effective solutions
+                <br>
+                that are customized to meet your needs.
             </p>
+            <div
+                id="alertButton"
+                type="button"
+                class="btn btn-secondary"
+                data-toggle="modal"
+                data-target="#alertModal"
+            >
+                Contact Us
+            </button>
+            <script>
+                // Add a click event listener to the button
+                document.getElementById('alertButton').addEventListener('click', function() {
+                    //alert('Waitlist Locked');
+                });
+            </script>
         </div>
-        <div></div>
-        <div id="stars"></div>
-        <script>
+    </div>
+</div>
+<div></div>
+<div id="stars"></div>
+<script>
     // Add stars to the #stars element using JavaScript
     const numStars = 100; // Adjust the number of stars as needed
 
@@ -70,7 +89,7 @@
 
         document.getElementById('stars').appendChild(star);
     }
-        </script>
-        <script src="assets/dist/js/bootstrap.bundle.min.js"></script>
-    </body>
+</script>
+<script src="assets/dist/js/bootstrap.bundle.min.js"></script>
+</body>
 </html>
