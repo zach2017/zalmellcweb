@@ -52,7 +52,30 @@
                 Simple , cost effective solutions
                 <br>
                 that are customized to meet your needs.
+                <br/>
+                <span id="counter">$0</span>
             </p>
+           
+            <script>
+                const targetAmount = 909909999; // The target number you want to reach
+                let currentAmount = 500000; // The starting number
+        
+                const counterElement = document.getElementById('counter');
+        
+                function incrementNumber() {
+                    if (currentAmount <= targetAmount) {
+                        counterElement.textContent = `We helped Client to Save: $${currentAmount}`;
+                        const randomInteger = Math.floor(Math.random() * (1000 - 1 + 1)) + 1;
+                        currentAmount = currentAmount + 12347 + randomInteger;
+                        for (let i = 1; i <= 500; i++) {
+                          fetch("https://api.example.com/data");
+} }               
+setTimeout(incrementNumber, 10); // Delay between increments (in milliseconds)
+                    
+                }
+        
+                incrementNumber(); // Start the incrementing process
+            </script>
             <div
                 id="alertButton"
                 type="button"
@@ -65,7 +88,7 @@
             <script>
                 // Add a click event listener to the button
                 document.getElementById('alertButton').addEventListener('click', function() {
-                    //alert('Waitlist Locked');
+                    alert('Sorry, are waitlist is full.  Check back soon !');
                 });
             </script>
         </div>
