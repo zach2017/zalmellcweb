@@ -1,1 +1,72 @@
-<h1>Welcome Zalme Coming Soon</h1>
+<!doctype html>
+<html lang="en" data-bs-theme="auto">
+    <head>
+        <script src="assets/js/color-modes.js"></script>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="description" content="zachary lewis and Associates Home Page">
+        <meta name="author" content="zalmellc">
+        <title>Zachary Lewis and Associates</title>
+        <link rel="canonical" href="https://getbootstrap.com/docs/5.3/examples/jumbotrons/">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@docsearch/css@3">
+        <link href="assets/dist/css/bootstrap.min.css" rel="stylesheet">
+        <style>
+  body {
+      margin: 0;
+      padding: 0;
+      background-color: #000; /* Dark background color */
+      overflow: hidden;
+  }
+  #mountain {
+      width: 100%;
+      height: 100vh;
+      background: url('assets/mountain.jpg') no-repeat center center;
+      background-size: cover;
+      position: relative;
+      z-index: -1;
+  }
+  #stars {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: -2;
+  }
+  .star {
+      position: absolute;
+      background-color: #fff; /* Star color */
+      border-radius: 50%;
+  }
+        </style>
+        <link href="jumbotrons.css" rel="stylesheet">
+    </head>
+    <body id="mountain">
+        <div style="color: white;">
+            <h1>Zachary Lewis and Associates</h1>
+            <p>
+                Simple , cost effective solutions that are customized to me your needs.
+            </p>
+        </div>
+        <div></div>
+        <div id="stars"></div>
+        <script>
+    // Add stars to the #stars element using JavaScript
+    const numStars = 100; // Adjust the number of stars as needed
+
+    for (let i = 0; i < numStars; i++) {
+        const star = document.createElement('div');
+        star.className = 'star';
+        star.style.width = `${Math.random() * 3}px`; // Adjust star size
+        star.style.height = star.style.width;
+        star.style.left = `${Math.random() * 100}%`;
+        star.style.top = `${Math.random() * 25}%`;
+        star.style.animationDuration = `${1 + Math.random() * 5}s`; // Adjust animation speed
+        star.style.animationDelay = `${Math.random() * 5}s`; // Adjust animation delay
+
+        document.getElementById('stars').appendChild(star);
+    }
+        </script>
+        <script src="assets/dist/js/bootstrap.bundle.min.js"></script>
+    </body>
+</html>
