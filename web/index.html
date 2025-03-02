@@ -1,107 +1,106 @@
-<!doctype html>
-<html lang="en" data-bs-theme="auto">
-    <head>
-        <script src="assets/js/color-modes.js"></script>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <meta name="description" content="zachary lewis and Associates Home Page">
-        <meta name="author" content="zalmellc">
-        <title>Zachary Lewis and Associates</title>
-        <link href="assets/dist/css/bootstrap.min.css" rel="stylesheet">
-        <style>
-  body {
-      margin: 0;
-      padding: 0;
-      background-color: #000; /* Dark background color */
-      overflow: hidden;
-  }
-  #mountain {
-      width: 100%;
-      height: 100vh;
-      background: url('assets/mountain.jpg') no-repeat center center;
-      background-size: cover;
-      position: relative;
-      z-index: -1;
-  }
-  #stars {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      z-index: -2;
-  }
-  .star {
-      position: absolute;
-      background-color: #fff; /* Star color */
-      border-radius: 50%;
-  }
-        </style>
-        <link href="jumbotrons.css" rel="stylesheet">
-    </head>
-    <body id="mountain">
-        <div style="color: rgb(190, 185, 185); text-align: center;">
-            <P>
-                <hr>
-            </P>
-            <br>
-            <br>
-            <br>
-            <h2>Zachary Lewis and Associates</h2>
-            <p>
-                Simple , cost effective solutions
-                <br>
-                We have saved our clients: <span style="color: rgb(255, 255, 255);" id="counter">$0</span> 
-                <br/>Start saving now ! <!-- Calendly link widget begin -->
-                <link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">
-                <script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript" async></script>
-                <a style="color: white;" href="" onclick="Calendly.initPopupWidget({url: 'https://calendly.com/gethelpz/talknow'});return false;">Contact Us</a></h1>
-                
-                <!-- Calendly link widget end -->
-            </p>
-           
-            <script>
-                const targetAmount = 99999999; // The target number you want to reach
-                let currentAmount = 000; // The starting number
-        
-                const counterElement = document.getElementById('counter');
-        
-                function incrementNumber() {
-                    if (currentAmount <= targetAmount) {
-                        
-                        counterElement.textContent = `$${currentAmount}`;
-                        const randomInteger = Math.floor(Math.random() * (100 - 1)) + 1000;
-                        currentAmount = currentAmount + 10 + randomInteger;
-                        }               
-setTimeout(incrementNumber, 10); // Delay between increments (in milliseconds)
-                    
-                }
-        
-                incrementNumber(); // Start the incrementing process
-            </script>
-
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zachary Lewis and Associates</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100 font-sans">
+    <!-- Header -->
+    <header class="bg-white shadow-sm">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
+            <div class="flex justify-between items-center">
+                <h1 class="text-2xl font-bold text-gray-900">Zachary Lewis and Associates</h1>
+                <nav class="hidden md:flex space-x-8">
+                    <a href="#" class="text-gray-600 hover:text-blue-600">Services</a>
+                    <a href="#" class="text-gray-600 hover:text-blue-600">Solutions</a>
+                    <a href="#" class="text-gray-600 hover:text-blue-600">About</a>
+                    <a href="#" class="text-gray-600 hover:text-blue-600">Contact</a>
+                </nav>
+                <button class="md:hidden text-gray-600">
+                    <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                    </svg>
+                </button>
+            </div>
         </div>
-    </div>
-</div>
-<div></div>
-<div id="stars"></div>
-<script>
-    // Add stars to the #stars element using JavaScript
-    const numStars = 100; // Adjust the number of stars as needed
+    </header>
 
-    for (let i = 0; i < numStars; i++) {
-        const star = document.createElement('div');
-        star.className = 'star';
-        star.style.width = `${Math.random() * 3}px`; // Adjust star size
-        star.style.height = star.style.width;
-        star.style.left = `${Math.random() * 100}%`;
-        star.style.top = `${Math.random() * 25}%`;
-        star.style.animationDuration = `${1 + Math.random() * 5}s`; // Adjust animation speed
-        star.style.animationDelay = `${Math.random() * 5}s`; // Adjust animation delay
+    <!-- Hero Section -->
+    <section class="bg-gradient-to-r from-blue-600 to-blue-800 text-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
+            <div class="grid md:grid-cols-2 gap-8 items-center">
+                <div>
+                    <h2 class="text-4xl font-bold mb-4">Innovative Solutions for Your Future</h2>
+                    <p class="text-lg mb-6">Zachary Lewis and Associates delivers cutting-edge technology and consulting services to transform your business.</p>
+                    <button class="bg-white text-blue-800 px-6 py-3 rounded-md font-semibold hover:bg-gray-100">
+                        Learn More
+                    </button>
+                </div>
+                <div class="hidden md:block">
+                    <!-- Placeholder for hero image -->
+                    <div class="bg-gray-300 h-64 rounded-lg"></div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-        document.getElementById('stars').appendChild(star);
-    }
-</script>
-<script src="assets/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Main Content -->
+    <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+        <div class="grid md:grid-cols-3 gap-8">
+            <div class="bg-white p-6 rounded-lg shadow">
+                <h3 class="text-xl font-semibold mb-2">Consulting</h3>
+                <p class="text-gray-600">Expert guidance for your digital transformation journey.</p>
+            </div>
+            <div class="bg-white p-6 rounded-lg shadow">
+                <h3 class="text-xl font-semibold mb-2">Technology</h3>
+                <p class="text-gray-600">Advanced solutions leveraging the latest innovations.</p>
+            </div>
+            <div class="bg-white p-6 rounded-lg shadow">
+                <h3 class="text-xl font-semibold mb-2">Support</h3>
+                <p class="text-gray-600">24/7 assistance for your business needs.</p>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+            <div class="grid md:grid-cols-4 gap-8">
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Zachary Lewis and Associates</h4>
+                    <p class="text-gray-400">Transforming businesses through innovation</p>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Company</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-400 hover:text-white">About Us</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">Careers</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">News</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Resources</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-400 hover:text-white">Blog</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">Support</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">Documentation</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Connect</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-400 hover:text-white">Contact Us</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">Twitter</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">LinkedIn</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="mt-8 pt-8 border-t border-gray-800 text-center text-gray-400">
+                <p>&copy; 2025 Zachary Lewis and Associates. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
 </body>
 </html>
